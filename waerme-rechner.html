@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watt-Rechner: Heizlast &amp; Heizkosten berechnen | Günter König Ratzeburg</title>
+<meta name="description" content="Berechnen Sie kostenlos die Heizlast Ihres Hauses in Watt, den Jahreswärmebedarf und die Heizkosten von Wärmepumpe, Brennwert, Pellet und Fernwärme im Vergleich – inklusive Förderung. Ohne Anmeldung.">
+<meta name="theme-color" content="#0E2A38">
+<!-- ENTWURFS-VORSCHAU: haelt die Seite aus Suchmaschinen heraus.
+     Diese Zeile beim Live-Gang unter eigener Domain ENTFERNEN. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E2A38'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='30' font-weight='bold' fill='%23fff' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="draftbar"><div class="wrap draftbar__in">
+  <span><b>Website-Entwurf</b> für Günter König Heizung–Sanitär · erstellt von Avalanche&nbsp;Commerce. Die Rechenwerte sind fachlich hinterlegte Richtwerte und im Detail noch mit dem Betrieb abzustimmen.</span>
+  <button type="button">Hinweis ausblenden</button>
+</div></div>
+
+<div class="topbar"><div class="wrap topbar__in">
+  <ul>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:+4945415501">04541 5501</a></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Möllner Straße 4, 23909 Ratzeburg</li>
+  </ul>
+  <span class="pill-emergency"><span class="dot"></span>24h-Notdienst: <a href="tel:+4945415501">04541 5501</a></span>
+</div></div>
+
+<header class="header"><div class="wrap header__in">
+  <a class="brand" href="index.html">
+    <span class="brand__mark">GK</span>
+    <span><span class="brand__name">Günter König</span><br><span class="brand__sub">Heizung · Sanitär · Ratzeburg</span></span>
+  </a>
+  <nav class="nav" aria-label="Hauptnavigation">
+    <a href="index.html">Start</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="baeder.html">Bäder</a>
+    <a href="waerme-rechner.html" aria-current="page">Wärme-Rechner</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="karriere.html">Karriere</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+  <a class="btn btn--primary" href="kontakt.html">Termin anfragen</a>
+  <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mnav"><span></span></button>
+</div></header>
+
+<div class="mobilenav" id="mnav">
+  <a href="index.html">Start</a>
+  <a href="leistungen.html">Leistungen</a>
+  <a href="baeder.html">Bäder &amp; Badsanierung</a>
+  <a href="waerme-rechner.html">Wärme-Rechner</a>
+  <a href="ueber-uns.html">Über uns</a>
+  <a href="karriere.html">Karriere</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a class="btn btn--primary btn--block" href="tel:+4945415501">Jetzt anrufen: 04541 5501</a>
+</div>
+
+<section class="section section--tight section--navy">
+  <div class="wrap center mw-head">
+    <p class="eyebrow">Watt-Rechner</p>
+    <h1 style="color:#fff">Wie viel Heizleistung braucht Ihr Haus?</h1>
+    <p class="lead">Sechs Fragen, zwei Minuten. Sie erfahren Ihre Heizlast in Watt und Kilowatt, den Jahres­wärmebedarf, die passende Gerätegröße und die Heizkosten von fünf Systemen im Vergleich – inklusive möglicher Förderung.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:980px">
+
+    <div class="calc" id="wattrechner">
+      <div class="calc__head">
+        <div>
+          <h2>Heizlast &amp; Heizkosten berechnen</h2>
+          <p>Kostenlos · ohne Anmeldung · Ergebnis sofort sichtbar</p>
+        </div>
+        <div class="calc__progress">
+          <span class="calc__count">Schritt 1 von 6</span>
+          <span class="calc__bar"><i></i></span>
+        </div>
+      </div>
+
+      <div class="calc__body">
+
+        <!-- 1 -->
+        <div class="qstep is-active" data-require="wr-typ">
+          <p class="qstep__q">Um welches Gebäude geht es?</p>
+          <p class="qstep__hint">Die Bauform entscheidet, über wie viele Außenflächen Wärme verloren geht.</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="wr-typ" value="efh" checked><span class="opt__box"><span class="opt__t">Einfamilienhaus</span><span class="opt__d">freistehend</span></span></label>
+            <label class="opt"><input type="radio" name="wr-typ" value="doppel"><span class="opt__box"><span class="opt__t">Doppelhaushälfte</span><span class="opt__d">oder Reihenendhaus</span></span></label>
+            <label class="opt"><input type="radio" name="wr-typ" value="reihe"><span class="opt__box"><span class="opt__t">Reihenmittelhaus</span><span class="opt__d">beidseitig angebaut</span></span></label>
+            <label class="opt"><input type="radio" name="wr-typ" value="wohnung"><span class="opt__box"><span class="opt__t">Wohnung</span><span class="opt__d">im Mehrfamilienhaus</span></span></label>
+            <label class="opt"><input type="radio" name="wr-typ" value="mfh"><span class="opt__box"><span class="opt__t">Mehrfamilienhaus</span><span class="opt__d">gesamtes Gebäude</span></span></label>
+          </div>
+          <p class="errtext qstep-err">Bitte wählen Sie eine Gebäudeart aus.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="qstep">
+          <p class="qstep__q">Wie groß ist die beheizte Fläche?</p>
+          <p class="qstep__hint">Gemeint ist die Wohnfläche, die tatsächlich geheizt wird – ein unbeheizter Keller oder Dachboden zählt nicht mit.</p>
+          <div class="slider-wrap" style="margin-bottom:22px">
+            <label for="wr-area" style="display:block;font-weight:700;margin-bottom:10px">Beheizte Wohnfläche</label>
+            <div class="slider-val"><b id="wr-area-val">140</b><span>m²</span></div>
+            <input type="range" id="wr-area" min="30" max="450" step="5" value="140">
+            <div class="slider-scale"><span>30 m²</span><span>240 m²</span><span>450 m²</span></div>
+          </div>
+          <div class="slider-wrap">
+            <label for="wr-pers" style="display:block;font-weight:700;margin-bottom:10px">Personen im Haushalt <span style="font-weight:500;color:var(--muted)">– bestimmt den Warmwasserbedarf</span></label>
+            <div class="slider-val"><b id="wr-pers-val">3</b><span>Personen</span></div>
+            <input type="range" id="wr-pers" min="1" max="12" step="1" value="3">
+            <div class="slider-scale"><span>1</span><span>6</span><span>12</span></div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="qstep" data-require="wr-bau">
+          <p class="qstep__q">Aus welcher Zeit stammt das Gebäude?</p>
+          <p class="qstep__hint">Wenn Sie unsicher sind: Das Baujahr steht meist im Energieausweis oder in den Kaufunterlagen. Spätere Dämmung erfassen wir im nächsten Schritt.</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="wr-bau" value="vor1978"><span class="opt__box"><span class="opt__t">Vor 1978</span><span class="opt__d">unsanierter Altbau · etwa 150 W/m²</span></span></label>
+            <label class="opt"><input type="radio" name="wr-bau" value="b1978_94"><span class="opt__box"><span class="opt__t">1978 – 1994</span><span class="opt__d">erste Wärmeschutz­verordnung · ca. 110 W/m²</span></span></label>
+            <label class="opt"><input type="radio" name="wr-bau" value="b1995_01" checked><span class="opt__box"><span class="opt__t">1995 – 2001</span><span class="opt__d">WSVO 95 · ca. 85 W/m²</span></span></label>
+            <label class="opt"><input type="radio" name="wr-bau" value="b2002_15"><span class="opt__box"><span class="opt__t">2002 – 2015</span><span class="opt__d">EnEV-Neubau · ca. 62 W/m²</span></span></label>
+            <label class="opt"><input type="radio" name="wr-bau" value="ab2016"><span class="opt__box"><span class="opt__t">Ab 2016</span><span class="opt__d">KfW-Effizienzhaus · ca. 42 W/m²</span></span></label>
+            <label class="opt"><input type="radio" name="wr-bau" value="passiv"><span class="opt__box"><span class="opt__t">Passivhaus</span><span class="opt__d">Höchster Standard · ca. 22 W/m²</span></span></label>
+          </div>
+          <p class="errtext qstep-err">Bitte wählen Sie den Baualtersbereich aus.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="qstep">
+          <p class="qstep__q">Was wurde seither modernisiert?</p>
+          <p class="qstep__hint">Mehrfachauswahl möglich. Jede Maßnahme senkt die benötigte Heizleistung – wählen Sie nur an, was tatsächlich gemacht wurde.</p>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="wr-mod" value="dach"><span class="opt__box"><span class="opt__t">Dach gedämmt</span><span class="opt__d">oder oberste Geschossdecke</span></span></label>
+            <label class="opt"><input type="checkbox" name="wr-mod" value="fassade"><span class="opt__box"><span class="opt__t">Fassade gedämmt</span><span class="opt__d">Außenwanddämmung</span></span></label>
+            <label class="opt"><input type="checkbox" name="wr-mod" value="fenster"><span class="opt__box"><span class="opt__t">Fenster erneuert</span><span class="opt__d">Zwei- oder Dreifach­verglasung</span></span></label>
+            <label class="opt"><input type="checkbox" name="wr-mod" value="keller"><span class="opt__box"><span class="opt__t">Kellerdecke gedämmt</span><span class="opt__d">von unten</span></span></label>
+            <label class="opt"><input type="checkbox" name="wr-mod" value="flaechenheizung"><span class="opt__box"><span class="opt__t">Fußboden- oder Wandheizung</span><span class="opt__d">vorhanden – gut für Wärmepumpen</span></span></label>
+            <label class="opt"><input type="checkbox" name="wr-mod" value="deckenhoehe"><span class="opt__box"><span class="opt__t">Raumhöhe über 3 m</span><span class="opt__d">typisch für Altbau – erhöht den Bedarf</span></span></label>
+          </div>
+          <div class="note note--info" style="margin-top:22px">Nichts davon zutreffend? Dann einfach weiter, ohne etwas auszuwählen.</div>
+        </div>
+
+        <!-- 5 -->
+        <div class="qstep" data-require="wr-alt">
+          <p class="qstep__q">Womit heizen Sie heute?</p>
+          <p class="qstep__hint">Daraus ermitteln wir Ihr Einsparpotenzial – und ob ein Klimageschwindigkeits-Bonus bei der Förderung möglich ist.</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="wr-alt" value="gas_alt" checked><span class="opt__box"><span class="opt__t">Gasheizung</span><span class="opt__d">älter als etwa 20 Jahre</span></span></label>
+            <label class="opt"><input type="radio" name="wr-alt" value="oel_alt"><span class="opt__box"><span class="opt__t">Ölheizung</span><span class="opt__d">älter als etwa 20 Jahre</span></span></label>
+            <label class="opt"><input type="radio" name="wr-alt" value="nachtstrom"><span class="opt__box"><span class="opt__t">Nachtspeicher / Strom</span><span class="opt__d">Direktheizung</span></span></label>
+            <label class="opt"><input type="radio" name="wr-alt" value="fernwaerme"><span class="opt__box"><span class="opt__t">Fernwärme</span><span class="opt__d">Wärmelieferung</span></span></label>
+            <label class="opt"><input type="radio" name="wr-alt" value="pellet"><span class="opt__box"><span class="opt__t">Holz oder Pellets</span><span class="opt__d">Kessel oder Ofen</span></span></label>
+            <label class="opt"><input type="radio" name="wr-alt" value="keine"><span class="opt__box"><span class="opt__t">Noch keine Heizung</span><span class="opt__d">Neubau</span></span></label>
+          </div>
+          <p class="errtext qstep-err">Bitte wählen Sie Ihre aktuelle Heizung aus.</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="qstep" data-require="wr-wunsch">
+          <p class="qstep__q">Woran denken Sie für die Zukunft?</p>
+          <p class="qstep__hint">Sie legen sich damit nicht fest – wir richten nur den Investitions- und Förderrahmen darauf aus.</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="wr-wunsch" value="waermepumpe" checked><span class="opt__box"><span class="opt__t">Wärmepumpe</span><span class="opt__d">Luft-Wasser, förderfähig</span></span></label>
+            <label class="opt"><input type="radio" name="wr-wunsch" value="gas"><span class="opt__box"><span class="opt__t">Gas-Brennwert</span><span class="opt__d">bewährt, günstig in der Anschaffung</span></span></label>
+            <label class="opt"><input type="radio" name="wr-wunsch" value="hybrid"><span class="opt__box"><span class="opt__t">Hybridlösung</span><span class="opt__d">Wärmepumpe plus Brennwert</span></span></label>
+            <label class="opt"><input type="radio" name="wr-wunsch" value="offen"><span class="opt__box"><span class="opt__t">Noch offen</span><span class="opt__d">Bitte beraten Sie mich</span></span></label>
+          </div>
+          <p class="errtext qstep-err">Bitte wählen Sie eine Richtung aus.</p>
+        </div>
+
+        <div class="calc__nav">
+          <button type="button" class="btn btn--ghost" data-prev>Zurück</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn--primary btn--lg" data-next>Weiter</button>
+        </div>
+
+        <!-- ============ ERGEBNIS ============ -->
+        <div class="result">
+          <div class="result__hero">
+            <p class="eyebrow">Ihr Ergebnis</p>
+            <div class="rbig"><b id="wr-kw">–</b><span>kW Heizlast</span></div>
+            <p class="rsub">So viel Wärmeleistung muss Ihre Heizung am kältesten Tag des Jahres bereitstellen.</p>
+            <span class="rwatt" id="wr-watt">–</span>
+          </div>
+
+          <div class="rgrid">
+            <div class="rtile">
+              <div class="rtile__k">Passende Gerätegröße</div>
+              <div class="rtile__v" id="wr-size">–</div>
+              <div class="rtile__n" id="wr-size-n">–</div>
+            </div>
+            <div class="rtile">
+              <div class="rtile__k">Wärmebedarf im Jahr</div>
+              <div class="rtile__v" id="wr-q">–</div>
+              <div class="rtile__n">Heizung und Warmwasser zusammen</div>
+            </div>
+            <div class="rtile rtile--accent">
+              <div class="rtile__k">Investitionsrahmen</div>
+              <div class="rtile__v" id="wr-inv">–</div>
+              <div class="rtile__n">inklusive Montage, vor Förderung</div>
+            </div>
+            <div class="rtile rtile--ok" id="wr-foerder-box">
+              <div class="rtile__k">Mögliche Förderung</div>
+              <div class="rtile__v" id="wr-foerder">–</div>
+              <div class="rtile__n" id="wr-foerder-n">–</div>
+            </div>
+            <div class="rtile rtile--ok" id="wr-spar-box">
+              <div class="rtile__k">Einsparpotenzial</div>
+              <div class="rtile__v" id="wr-spar">–</div>
+              <div class="rtile__n" id="wr-spar-n">–</div>
+            </div>
+          </div>
+
+          <!-- Aufschlüsselung der Förderquote: steht bewusst UNTER dem Raster,
+               weil ein langer Fußtext sonst alle Kacheln der Reihe streckt. -->
+          <p id="wr-foerder-det" style="color:var(--muted);font-size:.9rem;margin:-8px 0 26px"></p>
+
+          <h3 style="margin-top:36px">Was kostet welches System im Jahr?</h3>
+          <p style="color:var(--muted);font-size:.96rem;margin-bottom:18px">Reine Energiekosten für Ihren berechneten Wärmebedarf. Die hervorgehobene Zeile entspricht Ihrer gewählten Richtung.</p>
+          <div class="tab-scroll" id="wr-table"></div>
+
+          <div class="note">
+            <b>Wie belastbar ist das?</b> Diese Berechnung ist eine sorgfältige Orientierung auf Basis anerkannter Richtwerte – aber <b>keine Heizlastberechnung nach DIN EN 12831</b>. Sie ersetzt keine Vor-Ort-Aufnahme: Fenstergrößen, Verschattung, Luftdichtheit, tatsächliche Vorlauftemperatur und Ihr Heizverhalten fließen hier nicht ein und können das Ergebnis nach oben oder unten verschieben. Auch Energiepreise und Förderkonditionen ändern sich. Für ein verbindliches Angebot schauen wir uns Ihr Haus an – kostenlos.
+          </div>
+
+          <div style="background:var(--sand);border:1px solid var(--line);border-radius:var(--r-l);padding:clamp(24px,3.2vw,36px);margin-top:32px">
+            <h3>Ergebnis vom Fachmann prüfen lassen</h3>
+            <p style="color:var(--muted)">Wir schauen uns Ihre Werte an, sagen Ihnen ehrlich, ob sie plausibel sind, und machen Ihnen ein festes Angebot. Ihre Berechnung wird automatisch mitgeschickt.</p>
+
+            <form data-demo class="form" style="box-shadow:none;margin-top:22px">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="wrf-name">Name <span class="req">*</span></label>
+                  <input type="text" id="wrf-name" name="name" required autocomplete="name" placeholder="Vor- und Nachname">
+                  <p class="errtext">Bitte geben Sie Ihren Namen an.</p>
+                </div>
+                <div class="field">
+                  <label for="wrf-tel">Telefon <span class="req">*</span></label>
+                  <input type="tel" id="wrf-tel" name="telefon" required autocomplete="tel" placeholder="z. B. 04541 123456">
+                  <p class="errtext">Bitte geben Sie eine erreichbare Telefonnummer an.</p>
+                </div>
+                <div class="field">
+                  <label for="wrf-mail">E-Mail <span class="req">*</span></label>
+                  <input type="email" id="wrf-mail" name="email" required autocomplete="email" placeholder="name@beispiel.de">
+                  <p class="errtext">Bitte prüfen Sie Ihre E-Mail-Adresse.</p>
+                </div>
+                <div class="field">
+                  <label for="wrf-ort">Ort des Objekts</label>
+                  <input type="text" id="wrf-ort" name="ort" placeholder="z. B. Ratzeburg">
+                </div>
+                <div class="field span2">
+                  <label for="wr-summary">Ihre Berechnung <span style="font-weight:500;color:var(--muted)">– wird mitgesendet, Sie können ergänzen</span></label>
+                  <textarea id="wr-summary" name="berechnung" rows="9" readonly style="background:#fff;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88rem"></textarea>
+                </div>
+                <div class="field span2">
+                  <label for="wrf-msg">Ihre Anmerkung</label>
+                  <textarea id="wrf-msg" name="nachricht" placeholder="Zum Beispiel: Wann würden Sie umsetzen wollen? Gibt es Besonderheiten am Haus?"></textarea>
+                </div>
+              </div>
+              <label class="consent">
+                <input type="checkbox" required>
+                <span>Ich bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verwendet werden. <span class="req">*</span>
+                <span class="errtext">Bitte bestätigen Sie diesen Hinweis.</span></span>
+              </label>
+              <button class="btn btn--primary btn--lg btn--block" type="submit">Kostenloses Angebot anfordern</button>
+              <p style="font-size:.86rem;color:var(--muted);margin:14px 0 0;text-align:center">Antwort innerhalb eines Werktages · unverbindlich · keine Weitergabe Ihrer Daten</p>
+            </form>
+
+            <div class="formmsg">
+              <b>Vielen Dank – Ihre Anfrage ist angekommen.</b>
+              Wir melden uns innerhalb eines Werktages bei Ihnen. Wenn es schneller gehen soll, erreichen Sie uns direkt unter <a href="tel:+4945415501">04541 5501</a>.
+              <br><br><small><b>Hinweis zum Entwurf:</b> In dieser Vorschau wird noch keine E-Mail verschickt. Im Live-Betrieb geht die Anfrage direkt in das Postfach des Betriebs.</small>
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:28px">
+            <button type="button" class="btn btn--ghost" data-again>Neu berechnen</button>
+            <a class="btn btn--petrol" href="tel:+4945415501">Lieber telefonisch: 04541 5501</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Erläuterung -->
+    <div style="margin-top:56px">
+      <h2>Warum die richtige Größe so wichtig ist</h2>
+      <div class="grid grid--3" style="margin-top:28px">
+        <div class="card">
+          <h3>Zu groß gewählt</h3>
+          <p>Eine überdimensionierte Heizung taktet – sie springt ständig an und aus. Das kostet Effizienz, verkürzt die Lebensdauer und verschenkt bei Wärmepumpen einen erheblichen Teil der möglichen Jahresarbeitszahl.</p>
+        </div>
+        <div class="card">
+          <h3>Zu klein gewählt</h3>
+          <p>An wenigen sehr kalten Tagen wird es nicht richtig warm oder ein Heizstab muss einspringen – bei Wärmepumpen der teuerste Betriebszustand überhaupt.</p>
+        </div>
+        <div class="card">
+          <h3>Passend gewählt</h3>
+          <p>Die Anlage läuft ruhig und lange in ihrem besten Wirkungsbereich. Genau das ist der Unterschied zwischen einer Wärmepumpe, die sich rechnet, und einer, die enttäuscht.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:36px">
+      <h2>Was in diese Berechnung einfließt</h2>
+      <div class="tab-scroll" style="margin-top:22px">
+        <table class="rtab">
+          <thead><tr><th>Größe</th><th>Grundlage</th><th>Wert</th></tr></thead>
+          <tbody>
+            <tr><td>Spezifische Heizlast</td><td>Baualter und Dämmstandard</td><td>22 – 150 W/m²</td></tr>
+            <tr><td>Bauform</td><td>Anteil der Außenflächen</td><td>Faktor 0,80 – 1,00</td></tr>
+            <tr><td>Modernisierungen</td><td>Dach, Fassade, Fenster, Keller</td><td>bis −35 %</td></tr>
+            <tr><td>Warmwasser</td><td>Personen im Haushalt</td><td>0,25 kW und 750 kWh je Person</td></tr>
+            <tr><td>Vollbenutzungsstunden</td><td>Heizperiode Norddeutschland</td><td>1.900 h pro Jahr</td></tr>
+            <tr><td>Jahresarbeitszahl Wärmepumpe</td><td>Flächenheizung bzw. Heizkörper</td><td>4,0 bzw. 3,3</td></tr>
+            <tr><td>Energiepreise</td><td>Richtwerte 2026</td><td>Gas 11,5 ct · Öl 10,5 ct · Strom 26 ct je kWh</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.9rem;color:var(--muted);margin-top:16px">Alle Werte sind Richtwerte für eine erste Einordnung. Die verbindliche Auslegung erfolgt bei uns über eine raumweise Heizlastberechnung nach DIN EN 12831.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="emergency">
+  <div class="wrap emergency__in">
+    <div>
+      <p class="eyebrow" style="color:#FFDDC4">Heizung ausgefallen?</p>
+      <h2>Im Winter zählt jede Stunde</h2>
+      <p>Unser Notdienst ist rund um die Uhr erreichbar. Wartungskunden bekommen den ersten freien Termin.</p>
+      <a class="tel-big" href="tel:+4945415501">04541 5501</a>
+    </div>
+    <div><a class="btn btn--lg" href="tel:+4945415501">Jetzt anrufen</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:18px">
+          <span class="brand__mark">GK</span>
+          <span><span class="brand__name">Günter König</span><br><span class="brand__sub">Heizung · Sanitär</span></span>
+        </a>
+        <p>Fachbetrieb für Heizung, Sanitär und Bad in Ratzeburg – gegründet 1945. Inhaber: Matthias Ahrend.</p>
+      </div>
+      <div>
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="baeder.html">Bad &amp; Badsanierung</a></li>
+          <li><a href="leistungen.html#heizung">Heizung &amp; Wärmepumpe</a></li>
+          <li><a href="leistungen.html#service">Wartung &amp; Service</a></li>
+          <li><a href="leistungen.html#lueftung">Wohnraumlüftung</a></li>
+          <li><a href="leistungen.html#notdienst">24h-Notdienst</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Betrieb</h4>
+        <ul>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="karriere.html">Karriere &amp; Ausbildung</a></li>
+          <li><a href="waerme-rechner.html">Wärme-Rechner</a></li>
+          <li><a href="baeder.html#badplaner">Bad-Budgetplaner</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Möllner Straße 4<br>23909 Ratzeburg</li>
+          <li><a href="tel:+4945415501"><b>04541 5501</b></a></li>
+          <li>Mo–Do 7–16 Uhr<br>Fr 7–13 Uhr</li>
+          <li><b style="color:#fff">24h-Notdienst</b><br>unter derselben Nummer</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Günter König Heizung–Sanitär, Inh. Matthias Ahrend · Ratzeburg</span>
+      <span><a href="kontakt.html#impressum">Impressum</a> · <a href="kontakt.html#datenschutz">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

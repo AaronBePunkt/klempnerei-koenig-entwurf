@@ -1,0 +1,4 @@
+# Entwurfs-Vorschau – bewusst komplett von der Indexierung ausgenommen.
+# Beim Live-Gang unter eigener Domain durch eine normale robots.txt ersetzen.
+User-agent: *
+Disallow: /
